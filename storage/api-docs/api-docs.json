@@ -1,0 +1,975 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TYCC Website API",
+        "description": "API documentation for the TYCC website",
+        "contact": {
+            "email": "info@tycc.or.tz"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/contact": {
+            "post": {
+                "tags": [
+                    "Contact"
+                ],
+                "summary": "Submit a contact form message",
+                "operationId": "9041067ea4e7b2097364de064d33fe96",
+                "responses": {
+                    "200": {
+                        "description": "Message sent successfully"
+                    }
+                }
+            }
+        },
+        "/api/v1/contact-info": {
+            "get": {
+                "tags": [
+                    "Contact"
+                ],
+                "summary": "Get contact information",
+                "operationId": "1b1ed12b74064c58c6ed0905b491ca9b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/v1/events": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get a list of events",
+                "operationId": "b2e55feb6b984fe8bede8d15c4028b7d",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Create a new event",
+                "operationId": "dd683f690eaabf94d57d985cdf4f2120",
+                "responses": {
+                    "201": {
+                        "description": "Event created"
+                    }
+                }
+            }
+        },
+        "/api/v1/events/{id}": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get a specific event",
+                "operationId": "cab1311cf1b9c45ea4813e7b5d0fd908",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Update an event",
+                "operationId": "f2f9aa7bdb3bb955ea94ff859a7227d8",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Event updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Delete an event",
+                "operationId": "864e3bd26fe09c0fecb665af777c091a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Event deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/events/{id}/register": {
+            "post": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Register for an event",
+                "operationId": "a18d8da88e6b9185548e0a5de5e457a7",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully registered"
+                    }
+                }
+            }
+        },
+        "/api/v1/join-tycc": {
+            "post": {
+                "tags": [
+                    "Membership"
+                ],
+                "summary": "Submit a membership application",
+                "operationId": "e86fcac87290bb8c6c1b9fd36b481a2b",
+                "responses": {
+                    "200": {
+                        "description": "Application submitted successfully"
+                    }
+                }
+            }
+        },
+        "/api/v1/membership-status/{application_id}": {
+            "get": {
+                "tags": [
+                    "Membership"
+                ],
+                "summary": "Check membership application status",
+                "operationId": "b012394eb3f9e22ed43c576256c7b3be",
+                "parameters": [
+                    {
+                        "name": "application_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/v1/news": {
+            "get": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Get a list of news articles",
+                "operationId": "0a41686ae19fc1987cc2b7073539f82f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Create a new news article",
+                "operationId": "31bff0164efe7110d7c4daf29dc4d24c",
+                "responses": {
+                    "201": {
+                        "description": "Article created"
+                    }
+                }
+            }
+        },
+        "/api/v1/news/{slug}": {
+            "get": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Get a specific news article",
+                "operationId": "9cb9e92fdfbf0e3b17fca96f65829c19",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Update a news article",
+                "operationId": "c7d29d9ec828b62e5134de784f31b034",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Article updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "News"
+                ],
+                "summary": "Delete a news article",
+                "operationId": "6edbfa057ae7627b82c1176f09aaa3ea",
+                "parameters": [
+                    {
+                        "name": "slug",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Article deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/newsletter/subscribe": {
+            "post": {
+                "tags": [
+                    "Newsletter"
+                ],
+                "summary": "Subscribe to newsletter",
+                "operationId": "ffc3a780b610611a2c45fe32bdba6cf2",
+                "responses": {
+                    "200": {
+                        "description": "Successfully subscribed"
+                    }
+                }
+            }
+        },
+        "/api/v1/newsletter/unsubscribe": {
+            "post": {
+                "tags": [
+                    "Newsletter"
+                ],
+                "summary": "Unsubscribe from newsletter",
+                "operationId": "ec09fc9b73cd9f998381925696148d20",
+                "responses": {
+                    "200": {
+                        "description": "Successfully unsubscribed"
+                    }
+                }
+            }
+        },
+        "/api/v1/partners": {
+            "get": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Get a list of partners",
+                "operationId": "78ca89b3be1d6370e6550e9fb50d68b8",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Create a new partner",
+                "operationId": "9971e692b0cbee2a23424eaa56b9e8d2",
+                "responses": {
+                    "201": {
+                        "description": "Partner created"
+                    }
+                }
+            }
+        },
+        "/api/v1/partners/{id}": {
+            "get": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Get a specific partner",
+                "operationId": "ff279eb5a0d6c2172b5029fef428ced2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Update a partner",
+                "operationId": "f108284526113644e192d18f20d939fd",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Partner updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Partners"
+                ],
+                "summary": "Delete a partner",
+                "operationId": "adfac8aabc8ca395710ff8d6c803d8fe",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Partner deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/partnership-opportunities": {
+            "get": {
+                "tags": [
+                    "Partnership Opportunities"
+                ],
+                "summary": "Get a list of partnership opportunities",
+                "operationId": "af53f312ee48b2e756b5dc14c7c2e49d",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Partnership Opportunities"
+                ],
+                "summary": "Create a new partnership opportunity",
+                "operationId": "61b0798d42b2690cc83127a201126ef8",
+                "responses": {
+                    "201": {
+                        "description": "Partnership opportunity created"
+                    }
+                }
+            }
+        },
+        "/api/v1/partnership-opportunities/{id}": {
+            "get": {
+                "tags": [
+                    "Partnership Opportunities"
+                ],
+                "summary": "Get a specific partnership opportunity",
+                "operationId": "2b8950648954efd519dd7150141cbbff",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Partnership Opportunities"
+                ],
+                "summary": "Update a partnership opportunity",
+                "operationId": "d023341d391f1f666cd0f1f48d0cf304",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Partnership opportunity updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Partnership Opportunities"
+                ],
+                "summary": "Delete a partnership opportunity",
+                "operationId": "57ab0c301ed530cf818f71fcb3a1daac",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Partnership opportunity deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/programs": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Get a list of programs",
+                "operationId": "466884803e9225b42cc05588058c02a9",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Create a new program",
+                "operationId": "c72227b0b99b2893388464e6fb5ad5bf",
+                "responses": {
+                    "201": {
+                        "description": "Program created"
+                    }
+                }
+            }
+        },
+        "/api/v1/programs/{id}": {
+            "get": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Get a specific program",
+                "operationId": "2018a7fd6cf4bffa119df641ba345524",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Update a program",
+                "operationId": "fc2165c2360793beb56c9c7ea8736f78",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Program updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Programs"
+                ],
+                "summary": "Delete a program",
+                "operationId": "83f2da6b895a00ecd88cf2f5d2e1b46c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Program deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/resources": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get a list of resources",
+                "operationId": "5e46ed9b8fcb7987c428d0891e0b1b68",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Create a new resource",
+                "operationId": "0269e5d521e667f5db5332e1e5fb62c9",
+                "responses": {
+                    "201": {
+                        "description": "Resource created"
+                    }
+                }
+            }
+        },
+        "/api/v1/resources/{id}": {
+            "get": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Get a specific resource",
+                "operationId": "de689e287a563c1eb360d859029a6013",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Update a resource",
+                "operationId": "41ec9f6ff80bf12abf4986d95d14de93",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Resource updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Delete a resource",
+                "operationId": "a6f2ed5727a0f5a3060efd8b9a90c56f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Resource deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/resources/{id}/download": {
+            "post": {
+                "tags": [
+                    "Resources"
+                ],
+                "summary": "Track resource download and get URL",
+                "operationId": "d9e62e4d5dd77114edb4bf4b1bcfa746",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Download URL generated"
+                    }
+                }
+            }
+        },
+        "/api/v1/statistics": {
+            "get": {
+                "tags": [
+                    "Statistics"
+                ],
+                "summary": "Get public statistics",
+                "operationId": "352036af91fb74232fe34ce32a9e7fe9",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/v1/testimonials": {
+            "get": {
+                "tags": [
+                    "Testimonials"
+                ],
+                "summary": "Get a list of testimonials",
+                "operationId": "4f4c5713934b1ac9e9a14fa4736e52d1",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Testimonials"
+                ],
+                "summary": "Create a new testimonial",
+                "operationId": "1bc2345d58ff77d9d1c8b04dbcbf095f",
+                "responses": {
+                    "201": {
+                        "description": "Testimonial created"
+                    }
+                }
+            }
+        },
+        "/api/v1/testimonials/{id}": {
+            "get": {
+                "tags": [
+                    "Testimonials"
+                ],
+                "summary": "Get a specific testimonial",
+                "operationId": "2ac0b56dd5d74f461c2f150655426f3c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Testimonials"
+                ],
+                "summary": "Update a testimonial",
+                "operationId": "5845f2a16acfef3eb3a15c11d68812ea",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Testimonial updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Testimonials"
+                ],
+                "summary": "Delete a testimonial",
+                "operationId": "2b7f5f4d1ae7d848b60d0510544c943f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Testimonial deleted"
+                    }
+                }
+            }
+        },
+        "/api/v1/webinars": {
+            "get": {
+                "tags": [
+                    "Webinars"
+                ],
+                "summary": "Get a list of webinars",
+                "operationId": "6c3437a58a8502b4eff6e2d16c8b5a9f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Webinars"
+                ],
+                "summary": "Create a new webinar",
+                "operationId": "d282423fa295167acc4ab78b8628e96a",
+                "responses": {
+                    "201": {
+                        "description": "Webinar created"
+                    }
+                }
+            }
+        },
+        "/api/v1/webinars/{id}": {
+            "get": {
+                "tags": [
+                    "Webinars"
+                ],
+                "summary": "Get a specific webinar",
+                "operationId": "c5755443064e967b9725636aba023dc4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Webinars"
+                ],
+                "summary": "Update a webinar",
+                "operationId": "c7d95297cc8dd68d21a220bcbb1ec289",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Webinar updated"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Webinars"
+                ],
+                "summary": "Delete a webinar",
+                "operationId": "0dd386802d0363f2a19a4921a8a1eadc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Webinar deleted"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Programs",
+            "description": "API for managing programs"
+        },
+        {
+            "name": "News",
+            "description": "API for managing news articles"
+        },
+        {
+            "name": "Events",
+            "description": "API for managing events"
+        },
+        {
+            "name": "Resources",
+            "description": "API for managing resources"
+        },
+        {
+            "name": "Webinars",
+            "description": "API for managing webinars"
+        },
+        {
+            "name": "Partners",
+            "description": "API for managing partners"
+        },
+        {
+            "name": "Partnership Opportunities",
+            "description": "API for managing partnership opportunities"
+        },
+        {
+            "name": "Contact",
+            "description": "API for managing contact messages and info"
+        },
+        {
+            "name": "Membership",
+            "description": "API for managing membership applications"
+        },
+        {
+            "name": "Newsletter",
+            "description": "API for managing newsletter subscriptions"
+        },
+        {
+            "name": "Statistics",
+            "description": "API for retrieving statistics"
+        },
+        {
+            "name": "Testimonials",
+            "description": "API for managing testimonials"
+        }
+    ]
+}
