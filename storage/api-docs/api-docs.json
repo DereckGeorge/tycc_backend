@@ -165,10 +165,351 @@
                     "Membership"
                 ],
                 "summary": "Submit a membership application",
+                "description": "Submit a new membership application to Tanzania Youth Chamber of Commerce",
                 "operationId": "e86fcac87290bb8c6c1b9fd36b481a2b",
+                "requestBody": {
+                    "description": "Membership application data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "personal_info",
+                                    "agreements"
+                                ],
+                                "properties": {
+                                    "personal_info": {
+                                        "required": [
+                                            "first_name",
+                                            "last_name",
+                                            "email",
+                                            "phone",
+                                            "date_of_birth"
+                                        ],
+                                        "properties": {
+                                            "first_name": {
+                                                "type": "string",
+                                                "example": "John"
+                                            },
+                                            "last_name": {
+                                                "type": "string",
+                                                "example": "Doe"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "format": "email",
+                                                "example": "john.doe@example.com"
+                                            },
+                                            "phone": {
+                                                "type": "string",
+                                                "example": "+255712345678"
+                                            },
+                                            "date_of_birth": {
+                                                "type": "string",
+                                                "format": "date",
+                                                "example": "1995-06-15"
+                                            },
+                                            "gender": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "male",
+                                                    "female",
+                                                    "other"
+                                                ],
+                                                "example": "male"
+                                            },
+                                            "nationality": {
+                                                "type": "string",
+                                                "example": "Tanzanian"
+                                            },
+                                            "region": {
+                                                "type": "string",
+                                                "example": "Dar es Salaam"
+                                            },
+                                            "district": {
+                                                "type": "string",
+                                                "example": "Kinondoni"
+                                            },
+                                            "address": {
+                                                "type": "string",
+                                                "example": "123 Main Street, Msasani"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "education": {
+                                        "properties": {
+                                            "highest_level": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "certificate",
+                                                    "diploma",
+                                                    "degree",
+                                                    "masters",
+                                                    "phd"
+                                                ],
+                                                "example": "degree"
+                                            },
+                                            "institution": {
+                                                "type": "string",
+                                                "example": "University of Dar es Salaam"
+                                            },
+                                            "field_of_study": {
+                                                "type": "string",
+                                                "example": "Computer Science"
+                                            },
+                                            "graduation_year": {
+                                                "type": "string",
+                                                "example": "2020"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "business_info": {
+                                        "properties": {
+                                            "has_business": {
+                                                "type": "boolean",
+                                                "example": true
+                                            },
+                                            "business_name": {
+                                                "type": "string",
+                                                "example": "Tech Solutions Ltd"
+                                            },
+                                            "business_type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "sole_proprietorship",
+                                                    "partnership",
+                                                    "limited_company",
+                                                    "ngo"
+                                                ],
+                                                "example": "limited_company"
+                                            },
+                                            "business_stage": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "idea",
+                                                    "startup",
+                                                    "growth",
+                                                    "established"
+                                                ],
+                                                "example": "startup"
+                                            },
+                                            "registration_status": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "registered",
+                                                    "not_registered",
+                                                    "in_process"
+                                                ],
+                                                "example": "registered"
+                                            },
+                                            "employees_count": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "1",
+                                                    "2-5",
+                                                    "6-10",
+                                                    "11-50",
+                                                    "50+"
+                                                ],
+                                                "example": "2-5"
+                                            },
+                                            "annual_revenue": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "0-1M",
+                                                    "1M-5M",
+                                                    "5M-20M",
+                                                    "20M+"
+                                                ],
+                                                "example": "1M-5M"
+                                            },
+                                            "business_description": {
+                                                "type": "string",
+                                                "example": "Software development and IT consulting services"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "interests": {
+                                        "properties": {
+                                            "programs_of_interest": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "entrepreneurship",
+                                                        "leadership",
+                                                        "trade",
+                                                        "networking",
+                                                        "innovation"
+                                                    ]
+                                                }
+                                            },
+                                            "skills_to_develop": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "business_planning",
+                                                        "marketing",
+                                                        "finance",
+                                                        "leadership",
+                                                        "technology"
+                                                    ]
+                                                }
+                                            },
+                                            "mentorship_interest": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "mentor",
+                                                    "mentee",
+                                                    "both",
+                                                    "none"
+                                                ],
+                                                "example": "mentee"
+                                            },
+                                            "volunteer_interest": {
+                                                "type": "boolean",
+                                                "example": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "references": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Jane Smith"
+                                                },
+                                                "relationship": {
+                                                    "type": "string",
+                                                    "example": "Former Supervisor"
+                                                },
+                                                "phone": {
+                                                    "type": "string",
+                                                    "example": "+255712345679"
+                                                },
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": "jane.smith@company.com"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "agreements": {
+                                        "required": [
+                                            "terms_and_conditions",
+                                            "privacy_policy",
+                                            "code_of_conduct"
+                                        ],
+                                        "properties": {
+                                            "terms_and_conditions": {
+                                                "type": "boolean",
+                                                "example": true
+                                            },
+                                            "privacy_policy": {
+                                                "type": "boolean",
+                                                "example": true
+                                            },
+                                            "code_of_conduct": {
+                                                "type": "boolean",
+                                                "example": true
+                                            },
+                                            "newsletter_subscription": {
+                                                "type": "boolean",
+                                                "example": false
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "200": {
-                        "description": "Application submitted successfully"
+                        "description": "Application submitted successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "application_id": {
+                                                    "type": "string",
+                                                    "example": "TYCC-APP-2025-ABCD"
+                                                },
+                                                "status": {
+                                                    "type": "string",
+                                                    "example": "pending_review"
+                                                },
+                                                "first_name": {
+                                                    "type": "string",
+                                                    "example": "John"
+                                                },
+                                                "last_name": {
+                                                    "type": "string",
+                                                    "example": "Doe"
+                                                },
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": "john.doe@example.com"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Your membership application has been submitted successfully."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation Error."
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "personal_info.email": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string",
+                                                        "example": "The personal info.email field is required."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -179,20 +520,115 @@
                     "Membership"
                 ],
                 "summary": "Check membership application status",
+                "description": "Retrieve the status and details of a membership application using the application ID",
                 "operationId": "b012394eb3f9e22ed43c576256c7b3be",
                 "parameters": [
                     {
                         "name": "application_id",
                         "in": "path",
+                        "description": "The unique application ID (e.g., TYCC-APP-2025-ABCD)",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "TYCC-APP-2025-ABCD"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "Successful operation"
+                        "description": "Application found successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "application_id": {
+                                                    "type": "string",
+                                                    "example": "TYCC-APP-2025-ABCD"
+                                                },
+                                                "status": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "pending_review",
+                                                        "under_review",
+                                                        "approved",
+                                                        "rejected"
+                                                    ],
+                                                    "example": "pending_review"
+                                                },
+                                                "first_name": {
+                                                    "type": "string",
+                                                    "example": "John"
+                                                },
+                                                "last_name": {
+                                                    "type": "string",
+                                                    "example": "Doe"
+                                                },
+                                                "email": {
+                                                    "type": "string",
+                                                    "example": "john.doe@example.com"
+                                                },
+                                                "phone": {
+                                                    "type": "string",
+                                                    "example": "+255712345678"
+                                                },
+                                                "member_id": {
+                                                    "type": "string",
+                                                    "example": "TYCC-MEM-2025-001",
+                                                    "nullable": true
+                                                },
+                                                "created_at": {
+                                                    "type": "string",
+                                                    "format": "date-time",
+                                                    "example": "2025-07-09T10:30:00.000000Z"
+                                                },
+                                                "reviewed_at": {
+                                                    "type": "string",
+                                                    "format": "date-time",
+                                                    "example": null,
+                                                    "nullable": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Application status retrieved successfully."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Application not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Application not found."
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {}
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
                     }
                 }
             }
