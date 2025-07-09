@@ -28,10 +28,10 @@ return new class extends Migration
             $table->string('address');
 
             // Education
-            $table->string('highest_level');
-            $table->string('institution');
-            $table->string('field_of_study');
-            $table->string('graduation_year');
+            $table->string('highest_level')->nullable();
+            $table->string('institution')->nullable();
+            $table->string('field_of_study')->nullable();
+            $table->string('graduation_year')->nullable();
 
             // Business Info
             $table->boolean('has_business');

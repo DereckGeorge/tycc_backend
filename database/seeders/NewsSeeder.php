@@ -24,7 +24,7 @@ Located in the heart of Dar es Salaam, the 2,000 square meter facility includes 
 The hub will host various programs including coding bootcamps, startup accelerators, and tech talks featuring industry leaders. It will also serve as a venue for networking events and collaboration between entrepreneurs, investors, and established businesses.
 
 Applications for workspace membership are now open, with priority given to early-stage tech startups and entrepreneurs working on innovative solutions for local challenges.',
-                'category' => 'Innovation',
+                'category' => 'technology',
                 'date' => '2024-01-20',
                 'image' => 'news/innovation-hub-launch.jpg',
                 'slug' => 'tycc-launches-digital-innovation-hub',
@@ -51,7 +51,7 @@ Success stories from the cohort include a mobile app development company that ha
 The program\'s success rate continues to exceed expectations, with 85% of all graduates from previous cohorts still operating their businesses after two years. This success has attracted attention from international development partners, leading to increased funding for future cohorts.
 
 Applications for the next cohort open in February 2024, with the program set to accommodate 60 participants.',
-                'category' => 'Programs',
+                'category' => 'business',
                 'date' => '2024-01-18',
                 'image' => 'news/incubator-graduation.jpg',
                 'slug' => '50-entrepreneurs-graduate-business-incubator',
@@ -78,7 +78,7 @@ The funding will be available through various mechanisms including grants for ea
 Priority sectors for funding include agriculture and agribusiness, renewable energy, digital technology, healthcare, and manufacturing. The partnership also emphasizes support for women-led businesses, with at least 40% of funding allocated to female entrepreneurs.
 
 TYCC will serve as the implementing partner, responsible for identifying and vetting potential beneficiaries, providing ongoing support, and monitoring the impact of investments. The first call for applications is expected to open in March 2024.',
-                'category' => 'Partnerships',
+                'category' => 'business',
                 'date' => '2024-01-15',
                 'image' => 'news/afdb-partnership.jpg',
                 'slug' => 'partnership-african-development-bank',
@@ -107,7 +107,7 @@ Notable success stories include a catering business that grew from serving 20 cu
 The program\'s success has attracted international recognition, with delegations from Kenya, Uganda, and Rwanda visiting to learn about the model. Plans are underway to expand the program to other regions of Tanzania and potentially franchise the model to other countries.
 
 The next cohort begins in April 2024, with applications opening in February.',
-                'category' => 'Women Empowerment',
+                'category' => 'business',
                 'date' => '2024-01-12',
                 'image' => 'news/women-business-success.jpg',
                 'slug' => 'women-business-track-success-rate',
@@ -136,7 +136,7 @@ The summit will also feature the annual pitch competition, where 20 selected sta
 New this year is the Innovation Showcase, where participants can experience the latest technologies and solutions developed by young entrepreneurs. The showcase will feature virtual reality demonstrations, fintech solutions, and sustainable technology innovations.
 
 Early bird registration is available until February 15, 2024, with discounted rates for students and TYCC members. The summit will be held at the Dar es Salaam Convention Centre, with accommodation packages available at partner hotels.',
-                'category' => 'Events',
+                'category' => 'events',
                 'date' => '2024-01-10',
                 'image' => 'news/summit-registration.jpg',
                 'slug' => 'youth-business-summit-2024-registration',
@@ -165,7 +165,7 @@ Success factors contributing to this funding success include comprehensive busin
 Several funded startups have already begun expanding their operations, with plans to enter new markets and hire additional staff. The success is expected to attract more investors to the Tanzanian startup ecosystem and inspire other young entrepreneurs to pursue their business ideas.
 
 TYCC continues to support its members through investor readiness programs, pitch training, and connections to funding opportunities. The organization maintains relationships with over 50 investors and funding organizations.',
-                'category' => 'Success Stories',
+                'category' => 'announcements',
                 'date' => '2024-01-08',
                 'image' => 'news/funding-success.jpg',
                 'slug' => 'members-secure-funding-quarter',

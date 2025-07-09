@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('speaker_bio')->nullable();
             $table->string('video_url');
             $table->string('thumbnail')->nullable();
+            $table->string('category')->default('general');
             $table->integer('views')->default(0);
             $table->boolean('featured')->default(false);
             $table->string('status')->default('published');

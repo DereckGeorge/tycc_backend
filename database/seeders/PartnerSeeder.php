@@ -14,7 +14,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'African Development Bank',
                 'logo' => 'partners/afdb-logo.png',
-                'category' => 'Financial Institution',
+                'category' => 'financial_institution',
                 'description' => 'Leading development finance institution providing funding and technical assistance for youth entrepreneurship programs across Africa.',
                 'partnership_details' => 'Strategic funding partner providing $2M over 3 years for youth business development initiatives. The partnership includes grants, loans, and technical assistance for promising youth-led businesses.',
                 'website' => 'https://afdb.org',
@@ -32,7 +32,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'UNDP Tanzania',
                 'logo' => 'partners/undp-logo.png',
-                'category' => 'International Organization',
+                'category' => 'international_organization',
                 'description' => 'United Nations Development Programme supporting sustainable development and youth empowerment initiatives in Tanzania.',
                 'partnership_details' => 'Collaborative programs on youth employment and sustainable development goals implementation. Focus on capacity building and policy development for youth entrepreneurship ecosystem.',
                 'website' => 'https://undp.org/tanzania',
@@ -50,7 +50,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'Tanzania Chamber of Commerce',
                 'logo' => 'partners/tccia-logo.png',
-                'category' => 'Business Association',
+                'category' => 'business_association',
                 'description' => 'National chamber of commerce facilitating business development and trade promotion for Tanzanian businesses.',
                 'partnership_details' => 'Joint advocacy and business development programs for young entrepreneurs. Collaboration on policy development and business environment improvement initiatives.',
                 'website' => 'https://tccia.com',
@@ -68,7 +68,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'Mastercard Foundation',
                 'logo' => 'partners/mastercard-foundation-logo.png',
-                'category' => 'Foundation',
+                'category' => 'foundation',
                 'description' => 'Global foundation focused on advancing learning and promoting financial inclusion for young people in Africa.',
                 'partnership_details' => 'Financial inclusion and digital skills training programs for youth entrepreneurs. Support for digital payment solutions and financial literacy initiatives.',
                 'website' => 'https://mastercardfdn.org',
@@ -86,7 +86,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'World Bank Group',
                 'logo' => 'partners/worldbank-logo.png',
-                'category' => 'Financial Institution',
+                'category' => 'financial_institution',
                 'description' => 'International financial institution providing loans and grants for development projects worldwide.',
                 'partnership_details' => 'Technical assistance and capacity building support for entrepreneurship programs. Focus on private sector development and job creation initiatives.',
                 'website' => 'https://worldbank.org',
@@ -104,7 +104,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'USAID Tanzania',
                 'logo' => 'partners/usaid-logo.png',
-                'category' => 'Government Agency',
+                'category' => 'government_agency',
                 'description' => 'United States Agency for International Development supporting economic growth initiatives in Tanzania.',
                 'partnership_details' => 'Market access and trade facilitation programs for young entrepreneurs. Support for export development and international market entry strategies.',
                 'website' => 'https://usaid.gov/tanzania',
@@ -122,7 +122,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'Vodacom Foundation',
                 'logo' => 'partners/vodacom-foundation-logo.png',
-                'category' => 'Corporate Foundation',
+                'category' => 'corporate_foundation',
                 'description' => 'Corporate foundation focused on digital inclusion and youth empowerment through technology.',
                 'partnership_details' => 'Digital skills training and mobile technology solutions for young entrepreneurs. Support for digital literacy and mobile money adoption programs.',
                 'website' => 'https://vodacom.co.tz/foundation',
@@ -140,7 +140,7 @@ class PartnerSeeder extends Seeder
             [
                 'name' => 'University of Dar es Salaam',
                 'logo' => 'partners/udsm-logo.png',
-                'category' => 'Academic Institution',
+                'category' => 'academic_institution',
                 'description' => 'Leading university in Tanzania supporting research and innovation in entrepreneurship development.',
                 'partnership_details' => 'Research collaboration and student exchange programs. Joint development of entrepreneurship curriculum and innovation support for student startups.',
                 'website' => 'https://udsm.ac.tz',
