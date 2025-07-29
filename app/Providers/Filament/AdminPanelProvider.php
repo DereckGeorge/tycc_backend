@@ -41,7 +41,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationItems([
                 NavigationItem::make('View Website')
-                    ->url('/', shouldOpenInNewTab: true)
+                    ->url('https://tycc.co.tz', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-home')
                     ->group('External Links')
                     ->sort(3),
